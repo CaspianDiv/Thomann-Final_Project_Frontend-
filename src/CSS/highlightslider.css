@@ -1,0 +1,91 @@
+/* Custom Navigation Buttons Style */
+
+.swiper-nav-container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.swiper-prev-custom ,
+.swiper-next-custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    padding: 15px;
+    color: #fff;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    backdrop-filter: blur(10px);
+}
+.swiper-prev-custom:hover,
+.swiper-next-custom:hover{
+    background: #7E00F3;
+} 
+.dark .swiper-prev-custom:hover,
+.dark .swiper-next-custom:hover{
+    background: #01b4bc;
+    color: black;
+} 
+.swiper-prev-custom {
+    left: 15px;
+    top: -130px;
+}
+
+.swiper-next-custom {
+    right: 15px;
+    top: -130px;
+}
+
+.swiper-next-custom.disabled{
+    visibility: hidden;
+    opacity: 0;
+}
+.swiper-prev-custom.disabled{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.swiper-scrollbar {
+    background: #CCCC !important;
+    border-radius: 10px;
+}
+
+.swiper-scrollbar-drag {
+    background: #7E00F3 !important;
+    border-radius: 10px;
+}
+.dark .swiper-scrollbar {
+    background: #333 !important;
+    border-radius: 10px;
+}
+
+.dark .swiper-scrollbar-drag {
+    background: #01b4bc !important;
+    border-radius: 10px;
+}
+
+@media (min-width: 1024px) {
+    .swiper-nav-container:hover .swiper-next-custom,
+    .swiper-nav-container:hover .swiper-prev-custom {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .swiper-nav-container:hover .swiper-next-custom.disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .swiper-nav-container:hover .swiper-prev-custom.disabled {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}

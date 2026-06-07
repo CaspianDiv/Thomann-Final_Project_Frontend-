@@ -1,0 +1,25 @@
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-md-lg: 56.25rem;
+  --breakpoint-tab: 37.5rem;
+  --breakpoint-tab2: 40rem;
+  --breakpoint-tab3: 50rem;
+  --breakpoint-tab4: 56.25rem;
+  --breakpoint-md-2: 43.75rem;
+  --breakpoint-tab-md: 58.75rem;
+  --breakpoint-nm: 31.25rem;
+  --breakpoint-dl: 25rem;
+  --breakpoint-dl2: 18.75rem;
+  --breakpoint-ex-sm: 12.5rem;
+  --breakpoint-extra-sm: 10rem;
+  --breakpoint-extra-sm2: 9.37rem;
+}
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+

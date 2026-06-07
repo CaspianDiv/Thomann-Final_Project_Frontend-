@@ -1,0 +1,69 @@
+ .swiper {
+      width: 100%;
+}
+
+.swiper-slide {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.swiper-slide img {
+    object-fit: center;
+    background-position: cover;
+    border-radius: 10px;
+}
+/* Slider Container */
+
+.slider-container{
+    position: relative;
+    width: 100%;
+}
+
+/* Custom Navigation Arrows */
+.swiper-button-prv-custom ,
+.swiper-button-nxt-custom{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    visibility: hidden;
+    transition: all;
+    backdrop-filter: blur(10px);
+}
+
+/* Sol ox */
+
+.swiper-button-prv-custom {
+    left: 25%;
+}
+/* Sağ ox */
+.swiper-button-nxt-custom{
+    right: 25%;
+}
+.swiper-button-prv-custom:hover {
+    background: #7E00F3;
+}
+/* Sağ ox */
+.swiper-button-nxt-custom:hover {
+    background: #7E00F3;
+}
+
+.active {
+    background:#7E00F3; 
+}
+@media (min-width: 1024px) {
+    .slider-container:hover .swiper-button-prv-custom,
+    .slider-container:hover .swiper-button-nxt-custom {
+        opacity: 1;
+        visibility: visible;
+    }
+}
