@@ -1,4 +1,4 @@
-import HighlightSlider from "./HighlightSlider"
+import HighlightSlider from "./HighLightSlider"
 import { TfiAngleUp } from "react-icons/tfi";
 import TopBrandsSlider from "./TopBrandsSlider";
 import OffersSlider from "./OffersSlider";
