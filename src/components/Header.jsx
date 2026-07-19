@@ -163,9 +163,9 @@ function Header({ status , setStatus, setSearchValue}) {
                             
                                 theme === "light" ?  
                                 <Link to={"/Thomann"}>
-                                    <img src={thomannLogo} className="w-75  cursor-pointer xs:w-25 sm:w-39 sm:p-3  shrink-0 p-1" alt="Thomann Logo IMG" />
+                                    <img src={thomannLogo} className="cursor-pointer shrink-0 p-1" alt="Thomann Logo IMG" />
                                 </Link> :  <Link to={"/Thomann"}>
-                                    <img src={thomannDarkLogo} className="w-75  cursor-pointer  shrink-0 p-5" alt="Thomann Logo IMG" />
+                                    <img src={thomannDarkLogo} className="cursor-pointer shrink-0 p-5" alt="Thomann Logo IMG" />
                                 </Link>
             
                        }
@@ -213,10 +213,10 @@ function Header({ status , setStatus, setSearchValue}) {
                     </div>
                 </div>
                     <div className="ex-sm:hidden dl:hidden nm:hidden tab:flex tab:justify-between relative extra-sm:hidden extra-sm2:hidden">
-                        <div className="tab:flex tab:gap-3 tab:justify-start tab:items-center tab:px-10">
-                                <p className="text-[0.8rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Service</p>
-                                <p className="text-[0.8rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Contact us</p>
-                                <p className="text-[0.8rem] hidden tab2:block xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">About Us</p>
+                        <div className="flex items-center gap-2">
+                                <p className="text-[1.6rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Service</p>
+                                <p className="text-[1.6rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Contact</p>
+                                <p className="text-[1.6rem] hidden tab2:block xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">About</p>
                         </div>
                         <div className="tab:absolute top-[50%] left-[51%] translate-[-50%] transform hover:scale-110 transition-all">
                               {
@@ -236,9 +236,9 @@ function Header({ status , setStatus, setSearchValue}) {
                                   <PiSunLight onClick={() => handleTheme("light")} size={30} /> 
                             }
                             </div>
-                                <p className="text-[0.8rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Repair Service</p>
-                                <p className="text-[0.8rem] hidden xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Satisfaction Guarantee</p>
-                                <p className="text-[0.8rem] hidden xl:text-[1rem] xl:block lg:block md:block cursor-pointer hover:text-[#7E00F3] transition-colors">3-Year Thomann Warranty</p>
+                                <p className="text-[1rem] xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Repair Service</p>
+                                <p className="text-[1rem] hidden xl:text-[1rem] cursor-pointer hover:text-[#7E00F3] transition-colors">Satisfaction Guarantee</p>
+                                <p className="text-[1rem] hidden xl:text-[1rem] xl:block lg:block md:block cursor-pointer hover:text-[#7E00F3] transition-colors">3-Year Thomann Warranty</p>
                         </div>
                     </div>
                     <div className="tab:flex tab:justify-between tab:items-center ex-sm:hidden dl:hidden nm:hidden extra-sm:hidden  extra-sm2:hidden">
@@ -261,24 +261,23 @@ function Header({ status , setStatus, setSearchValue}) {
                             </div>
                         </div>
                            <div>
-                                <div className="xl:absolute tab:absolute xl:top-20  flex items-center sm:top-14 xl:gap-5 tab2:right-0 md:top-14 md:gap-2 sm:gap-2 xl:right-5 lg:right-0 md:right-0  xs:right-0 px-2 nm:top-14 dl:gap-2">
-                                    <p className="text-[0.7rem] xs:text-[0.8rem] sm:hidden font-semibold whitespace-nowrap hidden xs:block md:hidden xl:block nm:hidden dl:hidden ex-sm:hidden">EN - $</p>
+                                <div className="flex items-center gap-5">
                                     <button className="cursor-pointer" onClick={() => setFLagStatusSideBar(true)}>
-                                        <img src={usaSvg} className="w-4 xl:w-7.5 xl:h-7.5 lg:w-7.5 lg:h-7.5 h-4 xs:w-[1.2rem] xs:h-[1.2rem] sm:w-6 sm:h-6  object-cover bg-cover  rounded-[100%] border-2" alt="United States Image" />
+                                        <img src={usaSvg} className="w-11 h-11 object-cover bg-cover  rounded-[100%] border-2" alt="United States Image" />
                                     </button>
-                                    <PiUserCircle  onClick={() => setUserStatusSideBar(true)} className="xl:text-[2.3rem] hover:text-[#7E00F3] transition-colors lg:text-[2.3rem] md:text-[1.4rem] cursor-pointer nm:gap-2 dl:text-[1.4rem]  sm:text-[1.5rem]" />
+                                    <PiUserCircle  onClick={() => setUserStatusSideBar(true)} className="hover:text-[#7E00F3] transition-colors  cursor-pointer" size={50} />
                                     <NavLink to={"/WishList"}>
                                         <div className="relative">
                                                 <span className="absolute px-2 rounded-full text-lg dark:bg-[#01b4bc] dark:text-neutral-100 bg-violet-600 -top-2.5 -left-2.5 font-bold text-white">
                                                 {favCount > 99 ? '99+' : favCount}
-                                                </span><IoMdHeartEmpty  className="cursor-pointer hover:text-[#7E00F3] transition-colors xl:text-[2.3rem] lg:text-[2.3rem] md:text-[1.4rem] sm:text-[1.5rem] nm:gap-2 dl:text-[1.4rem] " />
+                                                </span><IoMdHeartEmpty  className="cursor-pointer" size={50} />
                                         </div>   
                                     </NavLink>
                                     <NavLink to={"/Basket"}>
                                         <div className="relative">
                                              <span className="absolute px-2 rounded-full text-lg dark:bg-[#01b4bc] dark:text-neutral-100 bg-violet-600 -top-2.5 -left-2.5 font-bold text-white">
                                                 {basketCount > 99 ? '99+' : basketCount}
-                                             </span><PiShoppingCartLight className="cursor-pointer hover:text-[#7E00F3] transition-colors xl:text-[2.3rem] lg:text-[2.3rem] md:text-[1.4rem] sm:text-[1.5rem] nm:gap-2 dl:text-[1.4rem] "/>
+                                             </span><PiShoppingCartLight className="cursor-pointer" size={50} />
                                         </div>
                                     </NavLink>
                                 </div>
@@ -311,24 +310,24 @@ function Header({ status , setStatus, setSearchValue}) {
                 <h3 className="xl:text-[1.8rem] text-[2rem] font-semibold">Welcome to Thomann</h3>
                 <img src={HiEmojiSvg} className="w-10 hidden xl:block sm:block" alt="Thomann Hi Emoji"/>
             </div>
-             <div className="h-[50vh] dark:bg-gray-900">
+             <div className="dark:bg-gray-900">
               <Slider />
-                <div className="flex py-30 lg:py-10 xl:py-10 gap-2 items-center justify-center lg:justify-around xl:justify-around">
+                <div className="flex flex-wrap py-30 lg:py-10 xl:py-10 gap-5 items-center justify-center lg:justify-around xl:justify-around">
                     <div className="flex items-center gap-2 ex-sm:gap-4">
                         <img src={moneyBackSvg} className="w-17.5"  alt="money back svg img"/>
-                        <p className="capitalize text-[1.8rem] hover:text-[#7E00F3] transition-colors cursor-pointer dark:text-[#01b4bc] tab:text-sm text-[#282828] xl:text-lg">days money-back</p>
+                        <p className="capitalize text-[2rem] whitespace-nowrap hover:text-[#7E00F3] transition-colors cursor-pointer dark:text-[#01b4bc]  text-[#282828] xl:text-lg">days money-back</p>
                     </div>
                     <div className="flex items-center gap-2 ex-sm:gap-4">
                           <img src={yearsWarranty} className="w-17.5" alt="3 years warranty svg img"/>
-                         <p className="text-[1.8rem] hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828]  dark:text-[#01b4bc] tab:text-sm xl:text-lg">Years warranty</p>
+                         <p className="text-[2rem] whitespace-nowrap hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828]  dark:text-[#01b4bc] xl:text-lg">Years warranty</p>
                     </div>
                     <div className="flex items-center gap-2 ex-sm:gap-4">
                         <img src={serviceRepair} className="w-17.5  nm:block" alt="Service Repair SVG img"/>
-                        <p className="text-[1.8rem] hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828]  dark:text-[#01b4bc] tab:text-sm xl:text-lg  nm:block">Best service in Europe</p>
+                        <p className="text-[2rem] whitespace-nowrap hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828]  dark:text-[#01b4bc] xl:text-lg">Best service in Europe</p>
                     </div>
                     <div className="flex items-center gap-2 ex-sm:gap-4">
                         <img src={biggestWareHouse} className="w-17.5 ex-sm:hidden nm:block" alt="Service Repair SVG img"/>
-                        <p className="ex-sm:text-[0.7rem] hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828] dark:text-[#01b4bc]  tab:text-sm xl:text-lg ex-sm:hidden nm:hidden capitalize tab:block">europe's largest warehouse</p>
+                        <p className=" hover:text-[#7E00F3] transition-colors cursor-pointer text-[#282828] dark:text-[#01b4bc]  text-[2rem] whitespace-nowrap xl:text-lg  capitalize">europe's largest warehouse</p>
                     </div>
                 </div>
             </div>
